@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-image, body {
+  background-image: url("./resources/pattern.png");
+  background-attachment: fixed;
+  background-size: 4.6875rem;
+}
+
+@font-face {
+  font-family: ChakraPetch;
+  src: url("./resources/ChakraPetch-Regular.ttf");
+}
+
+@layer components {
+  .bg-image, body {
+    @apply  bg-repeat bg-slate-900
+  }
+  .btn {
+    @apply text-center w-full border-2 transition-all border-transparent border-blue-700 font-semibold  p-1 rounded-lg hover:bg-transparent hover:border-2 hover:bg-blue-700
+  }
+  h1 {
+    @apply font-semibold text-lg
+  }
+}
+
+.line-clamp {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
