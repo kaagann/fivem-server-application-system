@@ -15,10 +15,10 @@ const Homepage = () => {
 
 
     return (
-        <div className='flex items-center justify-center'>
-            <h1 className='text-2xl'>Bakımda!</h1>
-        </div>
-        // <HomeContent/>
+        // <div className='flex items-center justify-center'>
+        //     <h1 className='text-2xl'>Bakımda!</h1>
+        // </div>
+        <HomeContent/>
     )
 }
 
@@ -42,9 +42,6 @@ const HomeContent = () => {
             setNews(x);
         })
     }, [])
-
-
-
 
     const Announcment = () => {
         return (
@@ -83,7 +80,7 @@ const HomeContent = () => {
             <div className='bg-gray-500/10 p-2 rounded-md'>
                 <div className='flex items-center justify-between my-1'>
                     <h1 className='text-md'>{data.header}.</h1>
-                    <p className='lowercase text-sm opacity-70'>Birkaç dakika önce</p>
+                    <p className='lowercase text-sm opacity-70 hidden md:block'>Birkaç dakika önce</p>
                 </div>
                 <img  src='https://media.discordapp.net/attachments/957578454021324810/980510507272405082/unknown.png'/>
                 <span className='text-base opacity-80 line-clamp mt-2'>{data.desc}</span>
@@ -107,8 +104,29 @@ const HomeContent = () => {
 
             <p className='opacity-50 first-letter:uppercase my-2 font-bold mx-4 text-2xl border-b-2 w-fit'>Haberler</p>
 
-            <div className='grid grid-cols-3 mx-4 gap-2'>
+            <div className='grid grid-cols-1 md:grid-cols-3 mx-4 gap-2'>
                 {newsFire.map((haber) => <News data={haber}/>)}
+            </div>
+.
+            <div className='w-full relative grid grid-cols-1 md:grid-cols-2 gap-2'>
+                <div>
+                    <p 
+                        className='opacity-50 first-letter:uppercase my-2 font-bold mx-4 text-2xl border-b-2 w-fit'
+                    >
+                        Aktif Oyuncular
+                    </p>
+                    <AktifOyuncular/>
+                </div>
+
+
+                <div>
+                    <p 
+                        className='opacity-50 first-letter:uppercase my-2 font-bold mx-4 text-2xl border-b-2 w-fit'
+                    >
+                        Aktif Birlikler
+                    </p>
+                    <AktifBirimler/>
+                </div>
             </div>
 
 
@@ -118,7 +136,88 @@ const HomeContent = () => {
 
 
 
+const AktifOyuncular = () => {
+    return (
+        <table className='w-full border rounded mx-4'>
+            <thead className='w-full p-2'>
+                <tr className='border-b-2 m-2'>
+                    <th>#</th>
+                    <th>Ad</th>
+                    <th>Soyad</th>
+                    <th>Oynama Saati</th>
+                </tr>
+            </thead>
 
+
+            <tbody>
+                <tr className='border-b'>
+                    <th>1</th>
+                    <th>Kagan</th>
+                    <th>Cengiz</th>
+                    <th>15000 saat</th>
+                </tr>
+
+                <tr className='border-b'>
+                    <th>1</th>
+                    <th>Kagan</th>
+                    <th>Cengiz</th>
+                    <th>15000 saat</th>
+                </tr>
+
+                <tr className='border-b'>
+                    <th>1</th>
+                    <th>Kagan</th>
+                    <th>Cengiz</th>
+                    <th>15000 saat</th>
+                </tr>
+
+                
+
+            </tbody>
+
+        </table>
+    )
+}
+
+
+const AktifBirimler = () => {
+    // Birlik	Tür	DoC	Los Santos
+    return (
+        <table className='w-full border rounded mx-4 text-center'>
+            <thead className='w-full p-2'>
+                <tr className='border-b-2 m-2'>
+                    <th>#</th>
+                    <th>Birlik</th>
+                    <th>Tür</th>
+                    <th>DoC</th>
+                    <th>Los Santos</th>
+                </tr>
+            </thead>
+
+            {/* Los Santos Police Department	Devlet	%100	%95 */}
+            <tbody>
+                <tr className='border-b'>
+                    <th>1</th>
+                    <th>Los Santos Police Department</th>
+                    <th>Devlet</th>
+                    <th>%100</th>
+                    <th>%95</th>
+                </tr>
+
+                <tr className='border-b'>
+                    <th>1</th>
+                    <th>Los Santos Police Department</th>
+                    <th>Devlet</th>
+                    <th>%100</th>
+                    <th>%95</th>
+                </tr>
+                
+
+            </tbody>
+
+        </table>
+    )
+}
 
 
 export default Homepage

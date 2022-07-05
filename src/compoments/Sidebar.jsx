@@ -16,7 +16,7 @@ const Sidebar = () => {
                 <p>Anasayfa</p>
             </Item>
 
-            {/* <Item>
+            <Item>
                 <BsFillDiamondFill/>
                 <p>Community</p>
             </Item>
@@ -29,10 +29,10 @@ const Sidebar = () => {
             <Item>
                 <BsBookmarkStarFill/>
                 <p>Dökümanlar</p>
-            </Item> */}
+            </Item>
 
         </SideBarItem>
-        {/* <SideBarItem name="Oyun İçi">
+        <SideBarItem name="Oyun İçi">
             <Item>
                 <FaUsers/>
                 <p>Karakterler</p>
@@ -53,7 +53,7 @@ const Sidebar = () => {
                 <FaBalanceScaleLeft/>
                 <p>LSAS</p>
             </Item>
-        </SideBarItem> */}
+        </SideBarItem>
 
         <SideBarItem name="Başvuru">
             <Item onClick={() => navigate(REDIRECT_PATH.BASVURU)}>

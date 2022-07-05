@@ -8,10 +8,13 @@
   background-size: 4.6875rem;
 }
 
-@font-face {
-  font-family: ChakraPetch;
-  src: url("./resources/ChakraPetch-Regular.ttf");
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&display=swap');
+
+
+* {
+  font-family: 'Chakra Petch', sans-serif !important;
 }
+
 
 @layer components {
   .bg-image, body {

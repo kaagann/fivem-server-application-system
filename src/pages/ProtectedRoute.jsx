@@ -14,4 +14,5 @@ const ProdectedRoute = ({children}) => {
 
     return children
 }
+
 export default ProdectedRoute
