@@ -107,7 +107,7 @@ const HomeContent = () => {
             <div className='grid grid-cols-1 md:grid-cols-3 mx-4 gap-2'>
                 {newsFire.map((haber) => <News data={haber}/>)}
             </div>
-.
+
             <div className='w-full relative grid grid-cols-1 md:grid-cols-2 gap-2'>
                 <div>
                     <p 
@@ -196,6 +196,14 @@ const AktifBirimler = () => {
 
             {/* Los Santos Police Department	Devlet	%100	%95 */}
             <tbody>
+                <tr className='border-b'>
+                    <th>1</th>
+                    <th>Los Santos Police Department</th>
+                    <th>Devlet</th>
+                    <th>%100</th>
+                    <th>%95</th>
+                </tr>
+
                 <tr className='border-b'>
                     <th>1</th>
                     <th>Los Santos Police Department</th>

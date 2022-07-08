@@ -24,7 +24,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className='w-full flex items-center justify-between bg-[#1c262f]/60 px-4 py-2'>
+        <div className='w-full flex items-center justify-between bg-[#1c262f]/60 px-4 py-2 fixed'>
             
             <section className='flex items-center gap-5'>
                 <AiOutlineMenu className='text-3xl cursor-pointer block md:hidden'/>
