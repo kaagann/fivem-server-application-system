@@ -7,14 +7,7 @@ import { getAuth } from "firebase/auth";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyCDljZP5ySVZXYE8urM1JlnxzPVXX_Y2vo",
-  authDomain: "kaganwebdb.firebaseapp.com",
-  projectId: "kaganwebdb",
-  storageBucket: "kaganwebdb.appspot.com",
-  messagingSenderId: "111834877745",
-  appId: "1:111834877745:web:b9ba1ef8f083dbd39e2a10"
-};
+const firebaseConfig = YOUR_FIREBASE_CONFIG
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
